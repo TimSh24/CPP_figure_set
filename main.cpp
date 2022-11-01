@@ -45,19 +45,15 @@ public:
         a_ = a;
         b_ = b;
     }
-
     string Name() const override {
         return Name_;
     }
-
     float Perimeter() const override {
         return 2 * (a_ + b_);
     }
-
     float Area() const override {
         return a_ * b_;
     }
-
 private:
     int a_;
     int b_;
@@ -68,19 +64,15 @@ public:
     Circle(const int& r) : Figure("CIRCLE") {
         r_ = r;
     }
-
     string Name() const override {
         return Name_;
     }
-
     float Perimeter() const override {
         return 2 * 3.14 * r_;
     }
-
     float Area() const override {
         return 3.14 * r_ * r_;
     }
-
 private:
     int r_;
 };
@@ -111,7 +103,6 @@ int main() {
     vector<shared_ptr<Figure>> figures;
     for (string line; getline(cin, line); ) {
         istringstream is(line);
-
         string command;
         is >> command;
         if (command == "ADD") {
